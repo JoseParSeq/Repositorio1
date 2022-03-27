@@ -1,3 +1,4 @@
+"""Creacion de la clase empleado"""
 
 class empleado (list):
     def __init__(self, nif, nombre, DOB, sueldom, tipo, var1, var2):
