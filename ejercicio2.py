@@ -1,5 +1,6 @@
 diccionario={}
 
+"""Funcion para mostrar por pantalla las funciones disponibles y pedir el numero"""
 def pedir_num():
     print("Menu de opciones")
     print("(1) Añadir empleado")
@@ -12,7 +13,7 @@ def pedir_num():
     print("")
     escoger_func(func)
 
-
+"""Funcion para asignar la funcion correspondiente"""
 def escoger_func(dato):
     if dato==1:
         add_empl()
@@ -32,6 +33,7 @@ def escoger_func(dato):
         pedir_num()
     return
 
+"""Funcion para añadir empleado"""
 def add_empl():
     global diccionario
     print("Introduzca los datos del empleado")
@@ -52,6 +54,7 @@ def add_empl():
     pedir_num()
     return
 
+"""Funcion para borrar empleado"""
 def del_empl():
     global diccionario
     NIF=input("Introduce el NIF del empleado a borrar: ")
@@ -65,6 +68,7 @@ def del_empl():
     pedir_num()
     return
 
+"""Funcion para mostrar por pantalla la lista de empleados"""
 def list_empl():
     global diccionario
     for empl, data in diccionario.items():
@@ -74,6 +78,7 @@ def list_empl():
     pedir_num()
     return
 
+"""Funcion para mostrar por pantalla los datos de un empleado"""
 def data_empl():
     global diccionario
     NIF=input("Introduce el NIF del empleado quieres consultar: ")
@@ -86,6 +91,7 @@ def data_empl():
     pedir_num()
     return
 
+"""Funcion para mostrar por pantalla los empleados que cumplen años este mes"""
 def cump_empl():
     global diccionario
     mes=int(input("Introduce un mes (1-12): "))
@@ -103,6 +109,7 @@ def cump_empl():
     pedir_num()
     return
 
+"""Funcion para finalizar"""
 def end_empl():
     print("Gracias por utilizar nuestros servicios")
     return
